@@ -1,12 +1,18 @@
 require_relative '../node_modules/react-native/scripts/react_native_pods'
 require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
 
+source 'https://github.com/shiguredo/sora-ios-sdk-specs.git'
+source 'https://github.com/CocoaPods/Specs.git'
+
 platform :ios, '10.0'
 
 target 'reactNativePractice' do
   config = use_native_modules!
 
   use_react_native!(:path => config["reactNativePath"])
+
+  # Add new pods below this line
+  pod 'ReactNativeWebRTCKit', :path => '../node_modules/react-native-webrtc-kit'
 
   target 'reactNativePracticeTests' do
     inherit! :complete
