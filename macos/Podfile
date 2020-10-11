@@ -1,5 +1,8 @@
 require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
 
+source 'https://github.com/shiguredo/sora-ios-sdk-specs.git'
+source 'https://github.com/CocoaPods/Specs.git'
+
 def add_flipper_pods!(versions = {})
   versions['Flipper'] ||= '~> 0.33.1'
   versions['DoubleConversion'] ||= '1.1.7'
@@ -76,6 +79,8 @@ abstract_target 'Shared' do
   pod 'glog', :podspec => '../node_modules/react-native-macos/third-party-podspecs/glog.podspec'
   pod 'RCT-Folly', :podspec => '../node_modules/react-native-macos/third-party-podspecs/RCT-Folly.podspec'
   pod 'boost-for-react-native', :podspec => '../node_modules/react-native-macos/third-party-podspecs/boost-for-react-native.podspec'
+
+  # Add new pods below this line
 
   target 'reactNativePractice-macOS' do
     platform :macos, '10.13'
