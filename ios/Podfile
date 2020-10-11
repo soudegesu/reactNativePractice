@@ -12,6 +12,8 @@ target 'reactNativePractice' do
   use_react_native!(:path => config["reactNativePath"])
 
   # Add new pods below this line
+  pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
+
   pod 'ReactNativeWebRTCKit', :path => '../node_modules/react-native-webrtc-kit'
 
   target 'reactNativePracticeTests' do
